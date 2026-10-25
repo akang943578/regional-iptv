@@ -2,6 +2,11 @@ name: Update playlist
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "build_playlist.py"
+      - ".github/workflows/update-playlist.yml"
   schedule:
     - cron: "17 */6 * * *"
 
